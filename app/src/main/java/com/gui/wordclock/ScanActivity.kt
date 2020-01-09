@@ -65,11 +65,17 @@ class ScanActivity : AppCompatActivity() {
                     val deviceHardwareAddress = device?.address // MAC address
                     Log.d("device_add", "$deviceHardwareAddress")
                     Log.d("device", "$deviceName")
-                    if(device?.address.equals("98:D3:61:F9:2B:FD")) {
-                        indeterminateBar.visibility = View.GONE
-                        wordclock.visibility = View.VISIBLE
-                        wordclock.text = "wordclock founded at the following address: $device"
+                    //device?.address.equals("98:D3:61:F9:2B:FD")
+
+                    deviceName?.let {
+                        if(it.toLowerCase().contains("clock")) {
+                            indeterminateBar.visibility = View.GONE
+                            wordclock.visibility = View.VISIBLE
+                            wordclock.text = "wordclock founded at the following address: $device"
+                        }
                     }
+
+
                 }
             }
         }
