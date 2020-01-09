@@ -7,10 +7,28 @@
     tools:context=".ScanActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/wordclock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="TOTO"/>
-
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:id="@+id/indeterminateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordclock"
+        android:text="Scan"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
